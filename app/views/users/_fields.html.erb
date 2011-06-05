@@ -4,7 +4,7 @@
   <%= f.text_field :name %>
 </div>
 <div class="field">
-  <%= f.label :email %>
+  <%= f.label :email, "Email (Please use the following format: studentid@mail.blackburn.ac.uk for students. @blackburn.ac.uk for staff)" %>
   <br/>
   <%= f.text_field :email %>
 </div>
@@ -28,7 +28,7 @@
   <br/>
   <%= f.text_field :interests %>
 <div class="field">
-  <%= f.label :password %>
+  <%= f.label :password, "Password (Must be 6 characters)" %>
   <br/>
   <%= f.password_field :password %>
 </div>
