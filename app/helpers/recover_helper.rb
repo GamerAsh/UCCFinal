@@ -1,0 +1,2 @@
+module RecoverHelper
+end

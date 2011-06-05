@@ -1,0 +1,316 @@
+body {
+    background-color: #0099ff;
+    width: 100%;
+}
+
+.main {
+    overflow: hidden;
+    width: 978px;
+    margin: 0 auto;
+    background: url(../images/logochange.png) no-repeat 0 0;
+    font-size: 13px;
+}
+
+/*header*/
+
+.content {
+    overflow: hidden;
+    width: 978px;
+    padding-top: 208px;
+}
+
+div.topbar {
+    overflow: hidden;
+    width: 978px;
+}
+div.botbar{
+    overflow: hidden;
+    width: 970px;
+    background-color: #FFF;
+}
+
+div.botbar ul{
+    overflow: hidden;
+    padding: 0 0 0 7px;
+    list-style: none;
+}
+
+div.botbar ul li {
+
+    text-align: center;
+    font-size: 18px;
+    line-height: 5px;
+    padding: 0 1px 0 1px;
+    margin: 1px 0 0 0;
+
+}
+
+div.botbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 7px 0 5px 0;
+    position: relative;
+    cursor: pointer;
+    color: #0a7285;
+}
+
+div.topbar ul {
+    overflow: hidden;
+    padding: 0 0 0 7px;
+}
+
+div.topbar ul li {
+    float: left;
+    width: 125px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 1px 0 1px;
+    margin: 1px 0 0 0;
+
+}
+
+div.topbar ul li a {
+    float: left;
+    display: block;
+    width: 125px;
+    background: url(../images/tab.png) no-repeat 0 0;
+    padding: 7px 0 5px 0;
+    position: relative;
+    cursor: pointer;
+    color: #0a7285;
+}
+
+div.topbar ul li.active {
+    width: 128px; /*height:18px;*/
+    margin: 0;
+}
+
+div.topbar ul li.active a {
+    background: url(../images/tab_act.gif) no-repeat 0 0;
+    width: 128px; /*height:18px;*/
+    color: #0a7285; /*padding-top:8px;*/
+}
+
+div.topbar ul li.active a:hover {
+    background: url(../images/tab_act.gif) no-repeat 0 0 !important; /*width:128px;*/
+
+}
+
+div.topbar ul li a:hover {
+    background: url(../images/tab_act_hover.gif) no-repeat 0 0 !important;
+
+}
+
+a.signup_button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 190px;
+    color: #d12f19;
+    background-image: url('../images/button.gif');
+    font-size: 200%;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.leftcol {
+
+    background-color: white;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*     round corners*/
+
+.round {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 4px solid black;
+
+}
+
+/*    footer*/
+footer {
+    text-align: center;
+    margin-top: 10px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer nav {
+    float: none;
+}
+
+/*     user*/
+
+td.sidebar.round {
+    width: 30%;
+    padding: 1em;
+    vertical-align: top;
+    background: #FFF;
+    float: right;
+}
+
+table {
+    text-align: center;
+    border-spacing: 2px;
+}
+
+table.profile {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+td.holder {
+    width: 70%;
+    padding: 1em;
+    background-color: white;
+}
+
+table.front {
+    background-color: white;
+    margin-bottom: 0px;
+
+}
+
+.profile img.gravatar {
+    border: 1px solid #999;
+    margin-bottom: -15px;
+}
+
+div.field, div.actions {
+    margin-bottom: 10px;
+
+}
+
+/*     errors*/
+
+.field_with_errors label {
+    color: red;
+}
+
+.field_with_errors input {
+    background-color: #fee3ad;
+    border-color: black;
+    border: 2px solid red;
+}
+
+#error_explanation {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
+}
+
+#error_explanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+ul.users {
+    margin-top: 1em;
+}
+
+ul.users li {
+    list-style: none;
+}
+
+/*     thought styling*/
+
+h1.thought {
+    margin-bottom: 0.3em;
+}
+
+table.thoughts {
+    margin-top: 1em;
+}
+
+table.thoughts tr {
+    height: 70px;
+    background-color: white;
+
+}
+
+table.thoughts td {
+    height: 70px;
+    background-color: white;
+
+}
+
+table.thoughts tr td.gravatar {
+    border-top: 1px solid #000;
+    vertical-align: top;
+    width: 50px;
+}
+
+table.thoughts tr td.thought {
+    border-top: 1px solid #000;
+    vertical-align: top;
+    background-color: white;
+    padding-top: 10px;
+}
+
+table.thoughts tr td.thought span.timestamp {
+    display: block;
+    font-size: 80%;
+    color: red;
+}
+table.wall tr td.wall_messages span.timestamp {
+    display: block;
+    font-size: 80%;
+    color: red;
+}
+
+div.user_info img {
+    padding-right: 0.1em;
+}
+
+div.user_info a {
+    text-decoration: none;
+}
+
+div.user_info span.user_name {
+    position: absolute;
+}
+
+div.user_info span.thoughts {
+    font-size: 80%;
+}
+
+form.new_thought {
+    margin-bottom: 2em;
+}
+
+form.new_thought textarea {
+    height: 4em;
+    margin-bottom: 0;
+}
+
+div.wall_messages {
+    float: left;
+    color: red
+}

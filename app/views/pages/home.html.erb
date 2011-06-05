@@ -1,0 +1,37 @@
+<% if signed_in? %>
+
+    <table class="front" summary="For signed-in users">
+      <tr>
+        <td class="holder">
+          <h1 class="thought">What are your thoughts?</h1>
+          <%= render 'shared/thought_form' %>
+          <%= render 'shared/feed' %>
+        </td>
+        <td class="sidebar round">
+          <%= render 'shared/user_info' %>
+          <%= render 'shared/stats' %>
+        </td>
+      </tr>
+
+
+    </table>
+
+
+
+
+
+<% else %>
+    <div class="leftcol">
+
+      <h1>Home</h1>
+
+      <p>Welcome to University Centre Connect! It only takes a few moments to sign up, and you'll be able to post
+        latest updates on your life, follow what your friends are saying, and message them! That's not all that is
+        in store of UCC, though. With future developments, users can expect groups/events, photo uploading, and an
+        assignment planner!.</p>
+      <%= render :partial => "sessions/new", :session => session%>
+
+      <!--<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>-->
+    </div>
+
+<% end %>

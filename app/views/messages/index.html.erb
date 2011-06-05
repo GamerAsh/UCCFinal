@@ -1,0 +1,15 @@
+
+
+<div class="leftcol">
+<%= stylesheet_link_tag 'messages' %>
+
+
+<h1>My Messages</h1>	
+<div id="messages_links">
+	<div id="messages_add"><%= link_to 'New Message', new_message_path %></div>
+</div>
+<div id="messages_table">
+	<%= render :partial => 'received_messages_list' %>
+	<%= render :partial => 'sent_messages_list' %>
+</div>
+</div>

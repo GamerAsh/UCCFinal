@@ -1,0 +1,24 @@
+<h3>Wall Messages:</h3>
+<% parent.wall_messages.each do |post| %>
+
+
+  <tr>
+        <td class="wall_messages">
+          <span class="sender"><%= link_to post.sender.name, user_url(post.sender) %> said: <br/></span>
+          <span class="message"><%= post.content %> <br/> </span>
+          <span class="timestamp">
+            Posted <%= time_ago_in_words(post.created_at) %> ago.
+          </span>
+
+        <div class="wall_messages_control">
+          <% if current_user == @user %>
+              <%= link_to "delete", post, :method => :delete %>
+          <% end %>
+        </div>
+        </td>
+ </tr>
+<% end %>
+<% if parent.wall_messages.length == 0 %> Sadly, there are no wall messages!
+<% end %>
+
+</div>

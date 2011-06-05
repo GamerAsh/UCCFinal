@@ -1,0 +1,33 @@
+<% @user ||= current_user %>
+<div class ="stats">
+
+  <table summary="Users Stats">
+    <tr>
+      <td>
+        <a href="<%= following_user_path(@user) %>">
+           <span id="following" class="stat">
+             <%= @user.following.count  %> following
+          </span>
+        </a>
+      </td>
+      <td>
+        <a href="<%= followers_user_path(@user) %>"
+           <span id="followers" class="stat">
+             <%= pluralize(@user.followers.count, "follower") %>
+          </span>
+      </a>
+      </td>
+    </tr>
+</table>
+
+       <strong>Name:</strong> <%= @user.name %>
+        <br/>
+        <strong>URL:</strong> <%= link_to user_path(@user), (@user) %>
+        <br/>
+        <strong>About Me:</strong>  <%= @user.aboutme    %><br/>
+        <strong>Course:</strong> <%= @user.course %><br/>
+  <strong>Favourite Classes:</strong> <%= @user.faveclasses %> <br/>
+  <strong>Interests:</strong>  <%= @user.interests %> <br/>
+
+        <strong>Thoughts</strong> <%= @user.thoughts.count %> <br/>
+</div>

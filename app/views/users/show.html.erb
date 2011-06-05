@@ -1,0 +1,35 @@
+<table class="profile" summary="Profile Information">
+  <tr>
+    <td class="profile round">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <%= render 'follower_form' if signed_in? %>
+      <table class="wall" summary="Wall content">
+        <%= render :partial => 'shared/wall_entry', :locals=>{:parent=>@user} %>
+        <%= render :partial => 'shared/wall_messages', :locals=>{:parent=>@user} %>
+      </table>
+      <% if @user.thoughts.any? %>
+          <h3>Your Thoughts:</h3>
+          <table class="thoughts" summary="User thoughts">
+            <%= render @thoughts %>
+          </table>
+          <%= will_paginate @thoughts %>
+      <% end %>
+      </td>
+      <td class="sidebar round">
+
+        <% if signed_in? && current_user != @user %>
+            <%= link_to 'Send', new_message_path({:recipient_id=>@user.id}) %> <%= @user.name %> a message
+            <br/>
+        <% end %>
+        <%= render 'shared/stats' %>
+      </td>
+
+  </tr>
+</table>
+
+		
+
+

@@ -1,0 +1,25 @@
+<div class="leftcol">
+<%= stylesheet_link_tag 'messages' %>
+	
+<div class="message">
+	<div class="message_text">
+		<div class="message_title"><%= @message.subject %></div>
+		<div class="message_detail">
+			<b>Sender:</b> <%= @message.sender.name %><br/>
+			<b>Recipient:</b> <%= @message.recipient.name %><br/>
+			<b>Sent:</b> <%= @message.created_at %>
+		</div>
+	</div>
+	<div class="message_body">
+		<%= @message.body %>
+	</div>
+	<div id="message_controls">
+		<% if !(@message.sender == current_user) %>
+			<button onclick="location.href = '<%= new_message_path({:recipient_id=>@message.sender.id, :subject=>'RE: ' + @message.subject}) %>'">Reply</button>
+		<% end %>
+		<button onclick="location.href = '<%= user_messages_path(current_user) %>'">Inbox</button>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+</div>
+
