@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :domain               => "universitycentreconnect.com",
   :user_name            => "birtwell",
-  :password             => "billgoldberg",
+  :password             => "Pswii60!",
   :authentication       => "plain",
   :enable_starttls_auto => true,
 }
