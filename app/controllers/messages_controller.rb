@@ -94,11 +94,10 @@ class MessagesController < ApplicationController
 
   private
   def correct_user
-      @user = User.find(params[:id])
+#      @user = User.find(params[:id])
       @message = Message.find(params[:id])
       unless (current_user == @message.sender or
-              current_user == @message.recipient or
-              current_user == @user)
+              current_user == @message.recipient)
         redirect_to user_path(current_user)
       end
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05e5e3a-a0a6-41bd-91c2-f493dfdd368a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_fields.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
     </list>
     <ignored path="UCC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,6 +35,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="39" selection-start="911" selection-end="911" vertical-scroll-proportion="-19.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/sessions/_new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="59" selection-start="518" selection-end="518" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="37" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.7472924">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_fields.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/_fields.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="58" selection-start="796" selection-end="796" vertical-scroll-proportion="0.5576208">
+            <state line="26" column="37" selection-start="676" selection-end="676" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
@@ -89,33 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_wall_messages.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_wall_messages.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wall_messages_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/wall_messages_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="197" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -133,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/stylesheets/blueprint/screen.css" />
         <option value="$PROJECT_DIR$/app/views/shared/_stats.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/about.html.erb" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/mail_setup.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
       </list>
     </option>
   </component>
@@ -289,6 +289,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UCCFinal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UCCFinal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1247,21 +1269,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/pages/help.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="125" selection-end="125" vertical-scroll-proportion="-3.125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="-1.875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="10" selection-start="4426" selection-end="4426" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/thoughts/_thought.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="27" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
@@ -1330,13 +1337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="402" selection-end="402" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="17" selection-start="147" selection-end="147" vertical-scroll-proportion="-2.5">
@@ -1346,7 +1346,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="58" selection-start="796" selection-end="796" vertical-scroll-proportion="0.5576208">
+        <state line="26" column="37" selection-start="676" selection-end="676" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="46" selection-start="402" selection-end="402" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="39" selection-start="911" selection-end="911" vertical-scroll-proportion="-19.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sessions/_new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="59" selection-start="518" selection-end="518" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="37" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.7472924">
           <folding />
         </state>
       </provider>
