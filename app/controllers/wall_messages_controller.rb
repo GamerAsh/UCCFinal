@@ -8,11 +8,11 @@ class WallMessagesController < ApplicationController
     @wall_message.user_id = params[:user_id]
     @wall_message.sender_id = current_user.id
 
-      if @wall_message.save
-        redirect_to root_path, :flash => {:success => "Your wall message has been sent!"}
-        set_parent
+    if @wall_message.save
+      redirect_to root_path, :flash => {:success => "Your wall message has been sent!"}
+      set_parent
 
-      end
+    end
 
 
   end
@@ -22,9 +22,9 @@ class WallMessagesController < ApplicationController
     respond_to do |format|
       if @wall_message.update_attributes(params[:wall_message])
         flash[:notice] = "The wall message has been updated!"
-        format.html { redirect_to(@wall_message)}
+        format.html { redirect_to(@wall_message) }
       else
-        format.html { render :action => "edit"}
+        format.html { render :action => "edit" }
       end
 
 

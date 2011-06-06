@@ -1,7 +1,6 @@
 class RecoverController < ApplicationController
 
 
-
   def new
   end
 

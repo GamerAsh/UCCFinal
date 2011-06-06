@@ -2,24 +2,24 @@ class MessagesController < ApplicationController
 
 
   before_filter :authenticate
-  before_filter :correct_user, :only => [:show ]
-  
-                            
+  before_filter :correct_user, :only => [:show]
+
+
   def index
 
 
     @user = User.find(params[:user_id])
     if current_user == @user
-    @sent_messages = @user.sent_messages
-    @received_messages = @user.received_messages
-    respond_to do |format|
-      format.html # index.html.erb
-    end
+      @sent_messages = @user.sent_messages
+      @received_messages = @user.received_messages
+      respond_to do |format|
+        format.html # index.html.erb
+      end
 
 
-      else
+    else
 
-    redirect_to user_messages_url(current_user)
+      redirect_to user_messages_url(current_user)
 
     end
   end
@@ -57,15 +57,15 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         flash[:notice] = 'Message was successfully created.'
-        
+
         format.html { redirect_to(@message) }
 
       else
         format.html { render :action => "new" }
 
+      end
     end
-    end
-    end
+  end
 
 
   def update
@@ -95,11 +95,11 @@ class MessagesController < ApplicationController
   private
   def correct_user
 #      @user = User.find(params[:id])
-      @message = Message.find(params[:id])
-      unless (current_user == @message.sender or
-              current_user == @message.recipient)
-        redirect_to user_path(current_user)
-      end
-
+    @message = Message.find(params[:id])
+    unless (current_user == @message.sender or
+        current_user == @message.recipient)
+      redirect_to user_path(current_user)
     end
+
+  end
 end

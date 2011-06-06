@@ -79,7 +79,7 @@ module ActionView
 
         submit_value = options[:submit_value] || options[:action].gsub(/[^\w]/, '').capitalize
 
-        contents = form_tag({:action => action}, :method =>(options[:method] || 'post'), :enctype => options[:multipart] ? 'multipart/form-data': nil)
+        contents = form_tag({:action => action}, :method =>(options[:method] || 'post'), :enctype => options[:multipart] ? 'multipart/form-data' : nil)
         contents.safe_concat hidden_field(record_name, :id) if record.persisted?
         contents.safe_concat all_input_tags(record, record_name, options)
         yield contents if block_given?
@@ -110,7 +110,7 @@ module ActionView
         options = args.extract_options!
         unless args.empty?
           ActiveSupport::Deprecation.warn('error_message_on takes an option hash instead of separate ' +
-            'prepend_text, append_text, html_tag, and css_class arguments', caller)
+                                              'prepend_text, append_text, html_tag, and css_class arguments', caller)
 
           options[:prepend_text] = args[0] || ''
           options[:append_text] = args[1] || ''
@@ -122,10 +122,10 @@ module ActionView
         object = convert_to_model(object)
 
         if (obj = (object.respond_to?(:errors) ? object : instance_variable_get("@#{object}"))) &&
-          (errors = obj.errors[method]).presence
+            (errors = obj.errors[method]).presence
           content_tag(options[:html_tag],
-            (options[:prepend_text].html_safe << errors.first).safe_concat(options[:append_text]),
-            :class => options[:css_class]
+                      (options[:prepend_text].html_safe << errors.first).safe_concat(options[:append_text]),
+                      :class => options[:css_class]
           )
         else
           ''
@@ -198,7 +198,7 @@ module ActionView
         end
 
         objects.compact!
-        count = objects.inject(0) {|sum, object| sum + object.errors.count }
+        count = objects.inject(0) { |sum, object| sum + object.errors.count }
 
         unless count.zero?
           html = {}
@@ -214,10 +214,10 @@ module ActionView
 
           I18n.with_options :locale => options[:locale], :scope => [:errors, :template] do |locale|
             header_message = if options.include?(:header_message)
-              options[:header_message]
-            else
-              locale.t :header, :count => count, :model => options[:object_name].to_s.gsub('_', ' ')
-            end
+                               options[:header_message]
+                             else
+                               locale.t :header, :count => count, :model => options[:object_name].to_s.gsub('_', ' ')
+                             end
 
             message = options.include?(:message) ? options[:message] : locale.t(:body)
 
@@ -239,11 +239,11 @@ module ActionView
         end
       end
 
-    private
+      private
 
       def all_input_tags(record, record_name, options)
         input_block = options[:input_block] || default_input_block
-        record.class.content_columns.collect{ |column| input_block.call(record_name, column) }.join("\n")
+        record.class.content_columns.collect { |column| input_block.call(record_name, column) }.join("\n")
       end
 
       def default_input_block

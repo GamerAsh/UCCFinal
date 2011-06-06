@@ -23,13 +23,14 @@ div.topbar {
     overflow: hidden;
     width: 978px;
 }
-div.botbar{
+
+div.botbar {
     overflow: hidden;
     width: 970px;
     background-color: #FFF;
 }
 
-div.botbar ul{
+div.botbar ul {
     overflow: hidden;
     padding: 0 0 0 7px;
     list-style: none;
@@ -279,6 +280,7 @@ table.thoughts tr td.thought span.timestamp {
     font-size: 80%;
     color: red;
 }
+
 table.wall tr td.wall_messages span.timestamp {
     display: block;
     font-size: 80%;

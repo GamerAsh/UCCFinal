@@ -16,7 +16,7 @@ class Friendship < ActiveRecord::Base
   belongs_to :friend, :class_name => 'User', :foreign_key => "friend_id"
   validates_presence_of :user_id, :friend_id
 
-    def self.are_friends(user, friend)
+  def self.are_friends(user, friend)
     return false if user == friend
     return true unless find_by_user_id_and_friend_id(user, friend).nil?
     return true unless find_by_user_id_and_friend_id(friend, user).nil?
@@ -24,7 +24,7 @@ class Friendship < ActiveRecord::Base
   end
 
 
-    def self.request(user, friend)
+  def self.request(user, friend)
     return false if are_friends(user, friend)
     return false if user == friend
     f1 = new(:user => user, :friend => friend, :status => "pending")

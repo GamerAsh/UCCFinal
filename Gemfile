@@ -32,14 +32,13 @@ gem "mail"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-    gem 'annotate-models', '1.0.4'
-    gem 'faker', '0.3.1'
-    gem 'ZenTest', '4.5.0'
-    gem 'rspec-rails', '2.5.0'
-    gem 'rspec', '2.5.0'
-    gem 'webrat', '0.7.3'
-    gem 'factory_girl_rails', '1.0'
-    
+  gem 'annotate-models', '1.0.4'
+  gem 'faker', '0.3.1'
+  gem 'ZenTest', '4.5.0'
+  gem 'rspec-rails', '2.5.0'
+  gem 'rspec', '2.5.0'
+  gem 'webrat', '0.7.3'
+  gem 'factory_girl_rails', '1.0'
 
 
 end

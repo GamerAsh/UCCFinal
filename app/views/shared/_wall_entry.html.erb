@@ -1,9 +1,8 @@
-
 <div>
-<%= form_for :wall_message, @wall_message, :url => { :action => "create", :controller => "wall_messages" } do |f| %>
+  <%= form_for :wall_message, @wall_message, :url => {:action => "create", :controller => "wall_messages"} do |f| %>
 
-  <%= f.text_area :content, :size => "60x12" %>       <br />
-  <%= submit_tag "create" %>
-<% end %>
+      <%= f.text_area :content, :size => "60x12" %>       <br/>
+      <%= submit_tag "create" %>
+  <% end %>
 
 </div>

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@title = "Home"
+    @title = "Home"
     if signed_in?
       @thought = Thought.new
       @feed_items = current_user.feed.paginate(:page => params[:page])
@@ -8,15 +8,15 @@ class PagesController < ApplicationController
   end
 
   def contact
-  	@title = "Contact"
+    @title = "Contact"
   end
-  
+
   def about
-  	@title = "About"
- end
- 
- def help
-   @title = "Help"
- end
+    @title = "About"
+  end
+
+  def help
+    @title = "Help"
+  end
 
 end

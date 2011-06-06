@@ -9,6 +9,6 @@ class Welcome < ActionMailer::Base
   def password_recover(user)
     @user = user
     mail(:to => "#{user.name} <#{user.email}>", :subject => "Password Recover")
-    
+
   end
 end

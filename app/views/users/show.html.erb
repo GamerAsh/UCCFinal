@@ -17,15 +17,15 @@
           </table>
           <%= will_paginate @thoughts %>
       <% end %>
-      </td>
-      <td class="sidebar round">
+    </td>
+    <td class="sidebar round">
 
-        <% if signed_in? && current_user != @user %>
-            <%= link_to 'Send', new_message_path({:recipient_id=>@user.id}) %> <%= @user.name %> a message
-            <br/>
-        <% end %>
-        <%= render 'shared/stats' %>
-      </td>
+      <% if signed_in? && current_user != @user %>
+          <%= link_to 'Send', new_message_path({:recipient_id=>@user.id}) %> <%= @user.name %> a message
+          <br/>
+      <% end %>
+      <%= render 'shared/stats' %>
+    </td>
 
   </tr>
 </table>

@@ -2,6 +2,7 @@ class ThoughtsController < ApplicationController
 
   before_filter :authenticate
   before_filter :authorised_user, :only => :destroy
+
   def create
     @thought = current_user.thoughts.build(params[:thought])
     if @thought.save
@@ -10,7 +11,7 @@ class ThoughtsController < ApplicationController
     else
       @feed_items = []
 
-    render 'pages/home'
+      render 'pages/home'
 
     end
   end

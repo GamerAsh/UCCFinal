@@ -1,34 +1,36 @@
 <div class="leftcol">
-<%= stylesheet_link_tag 'messages' %>
+  <%= stylesheet_link_tag 'messages' %>
 
-<h1>Send a Message</h1>		
-<div id="add_message">
-	<% form_for(:message, :url => messages_path, :html => { :multipart => true }) do |f| -%>
+  <h1>Send a Message</h1>
 
-		<% if @recipient_id == nil %>
-			<div class="form_field">
-		    	<label for="title">To:</label>
-				<%= f.collection_select(:recipient_id, @users, :id, :name, options ={:prompt => "-Select a recipient"}) %>
-			</div>
-		<% else %>
-	    	<label for="title">Recipient:</label>
-			<%= User.find_by_id(@recipient_id).name %><br/><br/>
-			<%= f.hidden_field(:recipient_id, :value=>@recipient_id) %>	
-		<% end %>
-		<div class="form_field">
-	    	<label for="title">Subject:</label>
-			<%= f.text_field :subject, :class=>'input_field', :value=>@subject %>
-		</div>
-		<div class="form_field">
-	    	<label for="body">Body:</label><br/>
-			<%= f.text_area :body, :cols=>60, :rows=>20, :class=>"mceEditor" %>
-		</div>
-		<div id="add_btn">
-	    	<%= f.submit "Send", :class=>'add_button' %>
-		</div>
-	<% end %>
-	<div style="clear:both;"></div>
-</div>
-<div style="clear:both;"></div>
+  <div id="add_message">
+    <% form_for(:message, :url => messages_path, :html => {:multipart => true}) do |f| -%>
+
+        <% if @recipient_id == nil %>
+            <div class="form_field">
+              <label for="title">To:</label>
+              <%= f.collection_select(:recipient_id, @users, :id, :name, options ={:prompt => "-Select a recipient"}) %>
+            </div>
+        <% else %>
+            <label for="title">Recipient:</label>
+            <%= User.find_by_id(@recipient_id).name %>
+            <br/><br/>
+            <%= f.hidden_field(:recipient_id, :value=>@recipient_id) %>
+        <% end %>
+        <div class="form_field">
+          <label for="title">Subject:</label>
+          <%= f.text_field :subject, :class=>'input_field', :value=>@subject %>
+        </div>
+        <div class="form_field">
+          <label for="body">Body:</label><br/>
+          <%= f.text_area :body, :cols=>60, :rows=>20, :class=>"mceEditor" %>
+        </div>
+        <div id="add_btn">
+          <%= f.submit "Send", :class=>'add_button' %>
+        </div>
+    <% end %>
+    <div style="clear:both;"></div>
+  </div>
+  <div style="clear:both;"></div>
 
 </div>

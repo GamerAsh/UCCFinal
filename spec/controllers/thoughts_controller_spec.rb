@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe ThoughtsController do
   render_views
-  
+
   describe "access control" do
     it "should deny access to 'create'" do
       post :create
       response.should redirect_to(signin_path)
     end
-    
+
     it "should deny access to 'destroy'" do
       delete :destroy, :id =>1
       response.should redirect_to(signin_path)
@@ -22,7 +22,7 @@ describe ThoughtsController do
 
     describe "failure" do
       before(:each) do
-        @attr ={ :content => ""}
+        @attr ={:content => ""}
       end
 
       it "should not create a thought" do
@@ -92,9 +92,6 @@ describe ThoughtsController do
       end
     end
   end
-
-
-
 
 
 end

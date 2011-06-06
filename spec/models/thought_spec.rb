@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Thought do
   before(:each) do
     @user = Factory(:user)
-    @attr = { :content => "lorem ipsum" }
+    @attr = {:content => "lorem ipsum"}
   end
   it "should create a new instance with valid attributes" do
     @user.thoughts.create!(@attr)
@@ -37,8 +37,6 @@ describe Thought do
       @user.thoughts.build(:content => "a" * 141).should_not be_valid
     end
   end
-
-
 
 
 end
